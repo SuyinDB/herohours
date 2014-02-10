@@ -77,4 +77,7 @@ Herohours::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  #required for devise, set this to actual host later, e.g. 'herohours.com'
+  config.action_mailer.default_url_options = { :host => 'http://herohours.herokuapp.com' }
 end
