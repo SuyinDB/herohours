@@ -1,10 +1,17 @@
 		<header>
 			<div class="container group">
 				<h1><%= link_to(image_tag("/hhlogo.png", :alt => "hero hours logo"), root_path) %></h1>
-				<nav>
-					<a href="#">About</a>
-					<a href="#">FAQs</a>
-					<a href="#contact">Sign Up</a>
-				</nav>
+				
+				<% if user_signed_in? %>
+					<nav>
+						<%= link_to "Log out", destroy_user_session_path, method: :delete %>
+					</nav>
+				<% else %>
+					<nav>
+						<%= link_to "Join now", new_user_registration_path%>
+						<%= link_to "Log in", new_user_session_path%>
+					</nav>
+				<% end %>
+
 			</div>
 		</header>
