@@ -2,6 +2,20 @@
 
 	<%= render 'layouts/nav' %>
 
+	<section id="loggedin">
+		<div class="container group">
+			<div class="profile">
+				<ul>
+					<li> <strong> First Name </strong> <%= @user.firstname %> </li>
+					<li> <strong> Surname </strong> <%= @user.surname %> </li>
+					<li> <strong> Email </strong> <%= @user.email %> </li>
+					<li> <strong> Member since </strong> <%= @user.created_at.strftime("%e %b %Y") %></li>
+				</ul>		
+			</div>
+		</div>
+	</section>
+
+
 <% else %>
 
 	<section id="hero"> 
@@ -79,7 +93,7 @@
 								<div class="response" id="mce-success-response" style="display:none"></div>
 							</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
 
-							<div class="clear"><input type="submit" value="Sign up" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+							<div class="clear"><input type="submit" value="Keep me informed" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
 						</form>
 					</div>
 					<!--End mc_embed_signup-->
