@@ -245,6 +245,9 @@ footer {
 		box-shadow: none;
 		height: auto;
 	}
+	div.buffer {
+		display: none;
+	}
 	section#hero {
 		height: auto;
 		margin: 0;
